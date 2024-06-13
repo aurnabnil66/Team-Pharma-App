@@ -7,9 +7,7 @@ import com.facebook.react.defaults.DefaultNewArchitectureEntryPoint.fabricEnable
 import com.facebook.react.defaults.DefaultReactActivityDelegate
 
 // react-native-splash-screen >= 0.3.1
-import org.devio.rn.splashscreen.SplashScreen; // here
-// react-native-splash-screen < 0.3.1
-import com.cboy.rn.splashscreen.SplashScreen; // here
+import org.devio.rn.splashscreen.SplashScreen;
 
 class MainActivity : ReactActivity() {
 
