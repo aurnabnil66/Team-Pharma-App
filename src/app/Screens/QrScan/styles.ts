@@ -27,8 +27,8 @@ const styles = StyleSheet.create({
     backgroundColor: 'rgba(0, 0, 0, 0.5)',
   },
   scannerArea: {
-    width: 250,
-    height: 250,
+    width: 320,
+    height: 320,
     borderWidth: 5,
     borderRadius: 5,
     borderColor: '#9BBDC4',

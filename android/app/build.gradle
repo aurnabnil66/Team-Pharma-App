@@ -56,11 +56,6 @@ react {
  */
 def enableProguardInReleaseBuilds = false
 
-project.ext.vectoricons = [
-    iconFontNames: [ 'MaterialIcons.ttf', 'EvilIcons.ttf' ] // Specify font files
-]
-
-apply from: file("../../node_modules/react-native-vector-icons/fonts.gradle")
 
 /**
  * The preferred build flavor of JavaScriptCore (JSC)
@@ -73,6 +68,9 @@ apply from: file("../../node_modules/react-native-vector-icons/fonts.gradle")
  * give correct results when using with locales other than en-US. Note that
  * this variant is about 6MiB larger per architecture than default.
  */
+
+apply from: file("../../node_modules/react-native-vector-icons/fonts.gradle")
+
 def jscFlavor = 'org.webkit:android-jsc:+'
 
 android {

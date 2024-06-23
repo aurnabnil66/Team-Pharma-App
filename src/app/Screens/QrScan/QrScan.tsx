@@ -3,7 +3,7 @@ import {TouchableOpacity, View} from 'react-native';
 import {RNCamera, BarCodeReadEvent} from 'react-native-camera';
 import {useNavigation} from '@react-navigation/native';
 import styles from './styles';
-//import Icon from 'react-native-vector-icons/MaterialIcons';
+import Icon from 'react-native-vector-icons/MaterialIcons';
 
 const QrScan: React.FC = () => {
   const navigation = useNavigation();
@@ -44,7 +44,7 @@ const QrScan: React.FC = () => {
       </RNCamera>
       <TouchableOpacity style={styles.captureButton} onPress={takePicture}>
         <View style={styles.circle}>
-          {/* <Icon name="qr-code-scanner" size={30} color="#fff" /> */}
+          <Icon name="qr-code-scanner" size={58} color="#424242" />
         </View>
       </TouchableOpacity>
     </View>

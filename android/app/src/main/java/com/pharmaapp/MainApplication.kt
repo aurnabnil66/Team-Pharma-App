@@ -13,6 +13,8 @@ import com.facebook.soloader.SoLoader
 
 import org.devio.rn.splashscreen.SplashScreenReactPackage
 
+import com.oblador.vectoricons.VectorIconsPackage;
+
 class MainApplication : Application(), ReactApplication {
 
   override val reactNativeHost: ReactNativeHost =

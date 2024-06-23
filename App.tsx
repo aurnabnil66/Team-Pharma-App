@@ -15,8 +15,34 @@ function App() {
   return (
     <NavigationContainer>
       <Stack.Navigator>
-        <Stack.Screen name="QrCode" component={QrCode} />
-        <Stack.Screen name="QrScan" component={QrScan} />
+        <Stack.Screen
+          name="QrCode"
+          component={QrCode}
+          options={{
+            title: 'TEAM',
+            headerStyle: {
+              backgroundColor: '#FBFAF3',
+            },
+            headerTintColor: '#045A6C',
+            headerTitleStyle: {
+              fontWeight: 'bold',
+            },
+          }}
+        />
+        <Stack.Screen
+          name="QrScan"
+          component={QrScan}
+          options={{
+            title: 'Scan QR Code',
+            headerStyle: {
+              backgroundColor: '#FBFAF3',
+            },
+            headerTintColor: '#045A6C',
+            headerTitleStyle: {
+              fontWeight: 'bold',
+            },
+          }}
+        />
       </Stack.Navigator>
     </NavigationContainer>
   );
