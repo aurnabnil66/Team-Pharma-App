@@ -1,6 +1,7 @@
-import {StyleSheet} from 'react-native';
+import {ScaledSheet} from 'react-native-size-matters';
+import {moderateScale, scale, verticalScale} from 'react-native-size-matters';
 
-const styles = StyleSheet.create({
+const styles = ScaledSheet.create({
   container: {
     flex: 1,
     alignItems: 'center',
@@ -8,32 +9,36 @@ const styles = StyleSheet.create({
     backgroundColor: '#FBFAF3',
   },
   image: {
-    width: 448,
-    height: 250,
+    width: '375@s',
+    height: verticalScale(209),
   },
   imageText: {
     flexDirection: 'column',
     alignItems: 'center',
-    padding: 65,
+    width: scale(343),
+    marginTop: verticalScale(70),
+    marginLeft: scale(20),
+    justifyContent: 'center',
   },
   loginHeader: {
-    fontSize: 36,
+    fontSize: moderateScale(36),
     fontWeight: '800',
     color: '#FBFAF3',
+    marginBottom: verticalScale(5),
   },
   loginHeaderText: {
-    fontSize: 16,
+    fontSize: moderateScale(16),
     fontWeight: '400',
     color: '#FBFAF3',
-    alignSelf: 'center',
+    textAlign: 'center',
   },
   email: {
-    marginTop: 70,
+    marginTop: verticalScale(20),
     flexDirection: 'column',
     gap: 9.53,
   },
   emailHeader: {
-    fontSize: 13.25,
+    fontSize: scale(13.25),
     fontWeight: '800',
   },
   emailIcon: {
@@ -44,21 +49,21 @@ const styles = StyleSheet.create({
     zIndex: 1,
   },
   emailInput: {
-    width: 327,
-    height: 53.39,
+    width: scale(280),
+    height: scale(50),
     backgroundColor: '#F3F2E9',
-    fontSize: 15.25,
+    fontSize: moderateScale(14),
     fontWeight: '600',
     borderRadius: 16,
     paddingLeft: 70,
   },
   password: {
-    marginTop: 30,
+    marginTop: verticalScale(15),
     flexDirection: 'column',
     gap: 9.53,
   },
   passwordHeader: {
-    fontSize: 13.25,
+    fontSize: scale(13.25),
     fontWeight: '800',
   },
   passwordIcon: {
@@ -69,10 +74,10 @@ const styles = StyleSheet.create({
     zIndex: 1,
   },
   passwordInput: {
-    width: 327,
-    height: 53.39,
+    width: scale(280),
+    height: scale(50),
     backgroundColor: '#F3F2E9',
-    fontSize: 15.25,
+    fontSize: moderateScale(14),
     fontWeight: '600',
     borderRadius: 16,
     paddingLeft: 70,
@@ -103,7 +108,7 @@ const styles = StyleSheet.create({
     justifyContent: 'space-between',
     alignItems: 'center',
     gap: 16,
-    marginTop: 50,
+    marginTop: verticalScale(10),
   },
   orText: {
     fontSize: 18,
@@ -124,7 +129,7 @@ const styles = StyleSheet.create({
     justifyContent: 'center',
     gap: 16,
     alignItems: 'center',
-    marginTop: 25,
+    marginTop: verticalScale(10),
   },
   guestButtonText: {
     color: '#424242',

@@ -27,9 +27,8 @@ function Login() {
         <View style={styles.imageText}>
           <Text style={styles.loginHeader}>Log In</Text>
           <Text style={styles.loginHeaderText}>
-            Log in to access your personalized Medinest
+            Log in to access your personalized Medinest experience
           </Text>
-          <Text style={styles.loginHeaderText}>experience</Text>
         </View>
       </ImageBackground>
       <View style={styles.email}>

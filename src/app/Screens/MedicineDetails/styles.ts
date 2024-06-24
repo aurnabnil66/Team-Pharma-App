@@ -1,4 +1,5 @@
 import {StyleSheet} from 'react-native';
+import {scale, moderateScale, verticalScale} from 'react-native-size-matters';
 
 const styles = StyleSheet.create({
   container: {
@@ -11,7 +12,7 @@ const styles = StyleSheet.create({
     width: 343,
     height: 56,
     borderRadius: 16,
-    top: 390,
+    top: verticalScale(270),
     backgroundColor: '#045A6C',
     flexDirection: 'row',
     justifyContent: 'center',
