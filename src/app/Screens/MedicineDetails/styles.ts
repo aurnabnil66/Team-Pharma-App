@@ -7,18 +7,15 @@ const styles = StyleSheet.create({
     justifyContent: 'center',
     backgroundColor: '#FBFAF3',
   },
-  image: {
-    width: 270,
-    height: 270,
-    resizeMode: 'contain',
-  },
   button: {
     width: 343,
     height: 56,
     borderRadius: 16,
-    top: 230,
+    top: 390,
     backgroundColor: '#045A6C',
+    flexDirection: 'row',
     justifyContent: 'center',
+    gap: 16,
     alignItems: 'center',
   },
   buttonText: {
