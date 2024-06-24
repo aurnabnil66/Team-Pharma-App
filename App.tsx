@@ -5,12 +5,17 @@ import {createNativeStackNavigator} from '@react-navigation/native-stack';
 import QrCode from './src/app/Screens/QrCode/QrCode';
 import QrScan from './src/app/Screens/QrScan/QrScan';
 import MedicineDetails from './src/app/Screens/MedicineDetails/MedicineDetails';
+import Login from './src/app/Screens/Login/Login';
 
 function App() {
   const Stack = createNativeStackNavigator();
   // Hook for splash screen
   useEffect(() => {
-    SplashScreen.hide();
+    const timer = setTimeout(() => {
+      SplashScreen.hide();
+    }, 3000); // Adjust the duration as needed (3000 ms = 3 seconds)
+
+    return () => clearTimeout(timer); // Clear the timer if the component unmounts
   }, []);
 
   return (
@@ -49,6 +54,20 @@ function App() {
           component={MedicineDetails}
           options={{
             title: 'Medicine Name',
+            headerStyle: {
+              backgroundColor: '#FBFAF3',
+            },
+            headerTintColor: '#424242',
+            headerTitleStyle: {
+              fontWeight: 'bold',
+            },
+          }}
+        />
+        <Stack.Screen
+          name="Login"
+          component={Login}
+          options={{
+            title: ' ',
             headerStyle: {
               backgroundColor: '#FBFAF3',
             },
