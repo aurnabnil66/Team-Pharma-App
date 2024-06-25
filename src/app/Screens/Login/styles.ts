@@ -1,7 +1,7 @@
-import {ScaledSheet} from 'react-native-size-matters';
+import {StyleSheet} from 'react-native';
 import {moderateScale, scale, verticalScale} from 'react-native-size-matters';
 
-const styles = ScaledSheet.create({
+const styles = StyleSheet.create({
   container: {
     flex: 1,
     alignItems: 'center',
@@ -9,7 +9,7 @@ const styles = ScaledSheet.create({
     backgroundColor: '#FBFAF3',
   },
   image: {
-    width: '375@s',
+    width: scale(375),
     height: verticalScale(209),
   },
   imageText: {
@@ -33,17 +33,17 @@ const styles = ScaledSheet.create({
     textAlign: 'center',
   },
   email: {
-    marginTop: verticalScale(20),
+    marginTop: verticalScale(18),
     flexDirection: 'column',
-    gap: 9.53,
+    gap: scale(8),
   },
   emailHeader: {
-    fontSize: scale(13.25),
+    fontSize: moderateScale(14),
     fontWeight: '800',
   },
   emailIcon: {
     position: 'absolute',
-    left: 20,
+    left: scale(16),
     top: '50%',
     transform: [{translateY: -15}], // Adjust the vertical alignment of the icon
     zIndex: 1,
@@ -62,100 +62,87 @@ const styles = ScaledSheet.create({
     flexDirection: 'column',
     gap: 9.53,
   },
-  passwordHeader: {
-    fontSize: scale(13.25),
-    fontWeight: '800',
-  },
   passwordIcon: {
     position: 'absolute',
-    left: 20,
+    left: scale(16),
     top: '50%',
     transform: [{translateY: -18}], // Adjust the vertical alignment of the icon
     zIndex: 1,
   },
-  passwordInput: {
-    width: scale(280),
-    height: scale(50),
-    backgroundColor: '#F3F2E9',
-    fontSize: moderateScale(14),
-    fontWeight: '600',
-    borderRadius: 16,
-    paddingLeft: 70,
-  },
   showPasswordIcon: {
     position: 'absolute',
-    right: 10,
-    top: '50%',
+    right: scale(10),
+    top: '47%',
     transform: [{translateY: -12}], // Adjust the vertical alignment of the icon
   },
   signInbutton: {
-    width: 343,
-    height: 56,
+    width: scale(280),
+    height: verticalScale(45),
     borderRadius: 16,
     backgroundColor: '#045A6C',
     flexDirection: 'row',
     justifyContent: 'center',
-    gap: 16,
+    gap: scale(12),
     alignItems: 'center',
-    marginTop: 25,
+    marginTop: verticalScale(20),
   },
   signInbuttonText: {
     color: '#FBFAF3',
-    fontSize: 20,
+    fontSize: moderateScale(20),
   },
   orPart: {
     flexDirection: 'row',
     justifyContent: 'space-between',
     alignItems: 'center',
-    gap: 16,
-    marginTop: verticalScale(10),
+    gap: scale(16),
+    marginTop: verticalScale(18),
   },
   orText: {
-    fontSize: 18,
+    fontSize: moderateScale(18),
     fontWeight: '400',
   },
   orHorizontalLine: {
-    height: 2,
-    width: 139,
+    height: verticalScale(2),
+    width: scale(120),
     backgroundColor: '#BDBDBD',
   },
   guestButton: {
-    width: 343,
-    height: 56,
+    width: scale(280),
+    height: verticalScale(45),
     borderRadius: 16,
     borderWidth: 1,
     borderColor: '#424242',
     flexDirection: 'row',
     justifyContent: 'center',
-    gap: 16,
+    gap: scale(12),
     alignItems: 'center',
     marginTop: verticalScale(10),
   },
   guestButtonText: {
     color: '#424242',
-    fontSize: 20,
+    fontSize: moderateScale(20),
   },
   askAboutAccount: {
     flexDirection: 'row',
-    marginTop: 25,
+    marginTop: verticalScale(16),
   },
   askAboutAccountText: {
-    fontSize: 14,
+    fontSize: moderateScale(14),
     fontWeight: '600',
     color: '#424242',
   },
   signUpText: {
     textDecorationLine: 'underline',
-    fontSize: 14,
+    fontSize: moderateScale(14),
     fontWeight: '600',
     color: '#424242',
   },
   forgotPassword: {
     textDecorationLine: 'underline',
     color: '#045A6C',
-    fontSize: 14,
+    fontSize: moderateScale(14),
     fontWeight: '600',
-    marginTop: 15,
+    marginTop: verticalScale(10),
   },
 });
 

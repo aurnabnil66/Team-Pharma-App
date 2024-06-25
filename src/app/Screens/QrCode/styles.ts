@@ -9,15 +9,15 @@ const styles = StyleSheet.create({
     backgroundColor: '#FBFAF3',
   },
   image: {
-    width: scale(270),
-    height: verticalScale(270),
+    width: scale(230),
+    height: verticalScale(230),
     resizeMode: 'contain',
   },
   button: {
     width: 343,
     height: 56,
     borderRadius: 16,
-    top: verticalScale(100),
+    marginTop: verticalScale(60),
     backgroundColor: '#045A6C',
     justifyContent: 'center',
     alignItems: 'center',

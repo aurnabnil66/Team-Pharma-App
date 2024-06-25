@@ -51,7 +51,7 @@ function Login() {
         </View>
       </View>
       <View style={styles.password}>
-        <Text style={styles.passwordHeader}>Password</Text>
+        <Text style={styles.emailHeader}>Password</Text>
         <View>
           <PasswordIcon
             name="lock"
@@ -62,7 +62,7 @@ function Login() {
             autoCapitalize="none"
             autoCorrect={false}
             secureTextEntry={!isPasswordVisible}
-            style={styles.passwordInput}
+            style={styles.emailInput}
             placeholder="Enter your password..."
             placeholderTextColor="#424242"
             maxLength={35}
@@ -72,7 +72,7 @@ function Login() {
             style={styles.showPasswordIcon}>
             <ShowPasswordIcon
               name={isPasswordVisible ? 'eye' : 'eyeo'}
-              size={25}
+              size={28}
               color={'#E0E0E0'}
             />
           </TouchableOpacity>
