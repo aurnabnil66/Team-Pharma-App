@@ -4,10 +4,10 @@ import {moderateScale, scale, verticalScale} from 'react-native-size-matters';
 const styles = StyleSheet.create({
   header: {
     width: scale(375),
-    height: verticalScale(209),
+    height: verticalScale(190),
     backgroundColor: '#4F8C98',
-    borderBottomLeftRadius: 130,
-    borderBottomRightRadius: 130,
+    borderBottomLeftRadius: 170, // Adjust radius as needed
+    borderBottomRightRadius: 170, // Adjust radius as needed
   },
   headerText: {
     flexDirection: 'column',

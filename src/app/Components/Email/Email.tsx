@@ -2,7 +2,12 @@ import {Text, TextInput, View} from 'react-native';
 import styles from './style';
 import EmailIcon from 'react-native-vector-icons/Fontisto';
 
-function Email() {
+interface EmailProps {
+  email: string;
+  setEmail: (email: string) => void;
+}
+
+const Email: React.FC<EmailProps> = ({email, setEmail}) => {
   return (
     <View>
       <Text style={styles.emailHeader}>Email Address</Text>
@@ -13,6 +18,8 @@ function Email() {
           color={'#424242'}
           style={styles.emailIcon}></EmailIcon>
         <TextInput
+          value={email}
+          onChangeText={setEmail}
           autoCapitalize="none"
           autoCorrect={false}
           keyboardType="email-address"
@@ -24,6 +31,6 @@ function Email() {
       </View>
     </View>
   );
-}
+};
 
 export default Email;

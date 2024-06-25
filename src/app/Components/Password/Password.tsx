@@ -26,7 +26,7 @@ function Password() {
           style={styles.passwordInput}
           placeholder="Enter your password..."
           placeholderTextColor="#424242"
-          maxLength={35}
+          maxLength={8}
         />
         <TouchableOpacity
           onPress={TogglePasswordVisibility}
