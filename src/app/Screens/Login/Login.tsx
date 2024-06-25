@@ -12,6 +12,7 @@ import ShowPasswordIcon from 'react-native-vector-icons/AntDesign';
 import {useState} from 'react';
 import RightArrowIcon from 'react-native-vector-icons/FontAwesome6';
 import GuestIcon from 'react-native-vector-icons/Feather';
+import Header from '../../Components/Header/Header';
 
 function Login() {
   const [isPasswordVisible, setPasswordVisible] = useState(false);
@@ -21,16 +22,10 @@ function Login() {
   };
   return (
     <View style={styles.container}>
-      <ImageBackground
-        source={require('../../../assets/login-header-frame.png')}
-        style={styles.image}>
-        <View style={styles.imageText}>
-          <Text style={styles.loginHeader}>Log In</Text>
-          <Text style={styles.loginHeaderText}>
-            Log in to access your personalized Medinest experience
-          </Text>
-        </View>
-      </ImageBackground>
+      <Header
+        mainTitle="Log In"
+        subTitle="Log in to access your personalized Medinest experience"
+      />
       <View style={styles.email}>
         <Text style={styles.emailHeader}>Email Address</Text>
         <View>

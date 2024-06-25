@@ -29,6 +29,7 @@ function App() {
             headerStyle: {
               backgroundColor: '#FBFAF3',
             },
+            headerShown: false,
             headerTintColor: '#045A6C',
             headerTitleStyle: {
               fontWeight: 'bold',
@@ -43,6 +44,7 @@ function App() {
             headerStyle: {
               backgroundColor: '#FBFAF3',
             },
+            headerShown: false,
             headerTintColor: '#045A6C',
             headerTitleStyle: {
               fontWeight: 'bold',
@@ -71,6 +73,7 @@ function App() {
             headerStyle: {
               backgroundColor: '#FBFAF3',
             },
+            headerShown: false,
             headerTintColor: '#424242',
             headerTitleStyle: {
               fontWeight: 'bold',
