@@ -4,7 +4,6 @@ import {RNCamera, BarCodeReadEvent} from 'react-native-camera';
 import {useNavigation} from '@react-navigation/native';
 import styles from './styles';
 import Icon from 'react-native-vector-icons/MaterialIcons';
-import MedicineDetails from '../MedicineDetails/MedicineDetails';
 
 const QrScan: React.FC = () => {
   const navigation = useNavigation();
@@ -15,8 +14,6 @@ const QrScan: React.FC = () => {
   const HandleQrCodeScanned = ({type, data}: BarCodeReadEvent) => {
     if (type === RNCamera.Constants.BarCodeType.qr && !scanned) {
       setScanned(true);
-      //alert(`QR code with data ${data} has been scanned!`);
-      navigation.goBack(); // navigate back to the previous screen
     }
   };
 
@@ -35,9 +32,9 @@ const QrScan: React.FC = () => {
     }
   };
 
-  const MoveToNext = () => {
-    navigation.navigate('MedicineDetails' as never);
-  };
+  // const MoveToNext = () => {
+  //   navigation.navigate('MedicineDetails' as never);
+  // };
 
   return (
     <View style={styles.container}>
@@ -57,17 +54,17 @@ const QrScan: React.FC = () => {
         </View>
       </RNCamera>
 
-      {/* <TouchableOpacity style={styles.captureButton} onPress={TakePicture}>
-        <View style={styles.circle}>
-          <Icon name="qr-code-scanner" size={58} color="#424242" />
-        </View>
-      </TouchableOpacity> */}
-
-      <TouchableOpacity style={styles.captureButton} onPress={MoveToNext}>
+      <TouchableOpacity style={styles.captureButton} onPress={TakePicture}>
         <View style={styles.circle}>
           <Icon name="qr-code-scanner" size={58} color="#424242" />
         </View>
       </TouchableOpacity>
+
+      {/* <TouchableOpacity style={styles.captureButton} onPress={MoveToNext}>
+        <View style={styles.circle}>
+          <Icon name="qr-code-scanner" size={58} color="#424242" />
+        </View>
+      </TouchableOpacity> */}
     </View>
   );
 };
