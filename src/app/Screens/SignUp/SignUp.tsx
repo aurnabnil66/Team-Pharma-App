@@ -11,9 +11,12 @@ import InstagramIcon from 'react-native-vector-icons/FontAwesome';
 import FullName from '../../Components/FullName/FullName';
 import Email from '../../Components/Email/Email';
 import Password from '../../Components/Password/Password';
+import {useState} from 'react';
 
 function SignUp() {
   const navigation = useNavigation();
+
+  const [email, setEmail] = useState<string>('');
 
   const HandleSignIn = () => {
     navigation.navigate('Login' as never);
@@ -29,7 +32,7 @@ function SignUp() {
         <FullName />
       </View>
       <View style={styles.email}>
-        <Email />
+        <Email email={email} setEmail={setEmail} />
       </View>
       <View style={styles.password}>
         <Password />

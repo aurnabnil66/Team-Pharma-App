@@ -10,6 +10,7 @@ import SignUp from './src/app/Screens/SignUp/SignUp';
 import ForgotPassword from './src/app/Screens/ForgetPassword/ForgotPassword';
 import EnterOtp from './src/app/Screens/EnterOtp/EnterOtp';
 import ResetPassword from './src/app/Screens/ResetPassword/ResetPassword';
+import PasswordChanged from './src/app/Screens/PasswordChanged/PasswordChanged';
 
 function App() {
   const Stack = createNativeStackNavigator();
@@ -132,6 +133,21 @@ function App() {
         <Stack.Screen
           name="ResetPassword"
           component={ResetPassword}
+          options={{
+            title: ' ',
+            headerStyle: {
+              backgroundColor: '#FBFAF3',
+            },
+            headerShown: false,
+            headerTintColor: '#424242',
+            headerTitleStyle: {
+              fontWeight: 'bold',
+            },
+          }}
+        />
+        <Stack.Screen
+          name="PasswordChanged"
+          component={PasswordChanged}
           options={{
             title: ' ',
             headerStyle: {

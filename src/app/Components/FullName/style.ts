@@ -5,6 +5,7 @@ const styles = StyleSheet.create({
   header: {
     fontSize: moderateScale(14),
     fontWeight: '800',
+    color: '#424242',
   },
   input: {
     width: scale(280),
@@ -13,7 +14,8 @@ const styles = StyleSheet.create({
     fontSize: moderateScale(14),
     fontWeight: '600',
     borderRadius: 16,
-    paddingLeft: 20,
+    paddingLeft: scale(18),
+    color: '#424242',
   },
 });
 
