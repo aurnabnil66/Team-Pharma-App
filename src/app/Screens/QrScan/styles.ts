@@ -1,4 +1,5 @@
 import {StyleSheet} from 'react-native';
+import {scale} from 'react-native-size-matters';
 
 const styles = StyleSheet.create({
   container: {
@@ -27,8 +28,8 @@ const styles = StyleSheet.create({
     backgroundColor: 'rgba(0, 0, 0, 0.5)',
   },
   scannerArea: {
-    width: 320,
-    height: 320,
+    width: scale(280),
+    height: scale(280),
     borderWidth: 5,
     borderRadius: 5,
     borderColor: '#9BBDC4',
