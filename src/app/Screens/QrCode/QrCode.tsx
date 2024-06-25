@@ -1,6 +1,5 @@
 import {View, Text, Image, TouchableOpacity} from 'react-native';
 import styles from './styles';
-import QrScan from '../QrScan/QrScan';
 import {useNavigation} from '@react-navigation/native';
 
 function QrCode() {

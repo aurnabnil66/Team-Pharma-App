@@ -6,6 +6,7 @@ import QrCode from './src/app/Screens/QrCode/QrCode';
 import QrScan from './src/app/Screens/QrScan/QrScan';
 import MedicineDetails from './src/app/Screens/MedicineDetails/MedicineDetails';
 import Login from './src/app/Screens/Login/Login';
+import SignUp from './src/app/Screens/SignUp/SignUp';
 
 function App() {
   const Stack = createNativeStackNavigator();
@@ -68,6 +69,21 @@ function App() {
         <Stack.Screen
           name="Login"
           component={Login}
+          options={{
+            title: ' ',
+            headerStyle: {
+              backgroundColor: '#FBFAF3',
+            },
+            headerShown: false,
+            headerTintColor: '#424242',
+            headerTitleStyle: {
+              fontWeight: 'bold',
+            },
+          }}
+        />
+        <Stack.Screen
+          name="SignUp"
+          component={SignUp}
           options={{
             title: ' ',
             headerStyle: {
