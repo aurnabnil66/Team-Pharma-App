@@ -1,10 +1,4 @@
-import {
-  ImageBackground,
-  Text,
-  TextInput,
-  TouchableOpacity,
-  View,
-} from 'react-native';
+import {Text, TextInput, TouchableOpacity, View} from 'react-native';
 import styles from './styles';
 import EmailIcon from 'react-native-vector-icons/Fontisto';
 import PasswordIcon from 'react-native-vector-icons/SimpleLineIcons';
@@ -13,13 +7,21 @@ import {useState} from 'react';
 import RightArrowIcon from 'react-native-vector-icons/FontAwesome6';
 import GuestIcon from 'react-native-vector-icons/Feather';
 import Header from '../../Components/Header/Header';
+import {useNavigation} from '@react-navigation/native';
 
 function Login() {
+  const navigation = useNavigation();
+
   const [isPasswordVisible, setPasswordVisible] = useState(false);
 
   const TogglePasswordVisibility = () => {
     setPasswordVisible(!isPasswordVisible);
   };
+
+  const HandleSignUp = () => {
+    navigation.navigate('SignUp' as never);
+  };
+
   return (
     <View style={styles.container}>
       <Header
@@ -93,7 +95,7 @@ function Login() {
 
       <View style={styles.askAboutAccount}>
         <Text style={styles.askAboutAccountText}>Don’t have an account?</Text>
-        <TouchableOpacity>
+        <TouchableOpacity onPress={() => HandleSignUp()}>
           <Text style={styles.signUpText}>Sign Up</Text>
         </TouchableOpacity>
       </View>
