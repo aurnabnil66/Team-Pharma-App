@@ -7,6 +7,9 @@ import QrScan from './src/app/Screens/QrScan/QrScan';
 import MedicineDetails from './src/app/Screens/MedicineDetails/MedicineDetails';
 import Login from './src/app/Screens/Login/Login';
 import SignUp from './src/app/Screens/SignUp/SignUp';
+import ForgotPassword from './src/app/Screens/ForgetPassword/ForgotPassword';
+import EnterOtp from './src/app/Screens/EnterOtp/EnterOtp';
+import ResetPassword from './src/app/Screens/ResetPassword/ResetPassword';
 
 function App() {
   const Stack = createNativeStackNavigator();
@@ -84,6 +87,51 @@ function App() {
         <Stack.Screen
           name="SignUp"
           component={SignUp}
+          options={{
+            title: ' ',
+            headerStyle: {
+              backgroundColor: '#FBFAF3',
+            },
+            headerShown: false,
+            headerTintColor: '#424242',
+            headerTitleStyle: {
+              fontWeight: 'bold',
+            },
+          }}
+        />
+        <Stack.Screen
+          name="ForgotPassword"
+          component={ForgotPassword}
+          options={{
+            title: ' ',
+            headerStyle: {
+              backgroundColor: '#FBFAF3',
+            },
+            headerShown: false,
+            headerTintColor: '#424242',
+            headerTitleStyle: {
+              fontWeight: 'bold',
+            },
+          }}
+        />
+        <Stack.Screen
+          name="EnterOtp"
+          component={EnterOtp}
+          options={{
+            title: ' ',
+            headerStyle: {
+              backgroundColor: '#FBFAF3',
+            },
+            headerShown: false,
+            headerTintColor: '#424242',
+            headerTitleStyle: {
+              fontWeight: 'bold',
+            },
+          }}
+        />
+        <Stack.Screen
+          name="ResetPassword"
+          component={ResetPassword}
           options={{
             title: ' ',
             headerStyle: {

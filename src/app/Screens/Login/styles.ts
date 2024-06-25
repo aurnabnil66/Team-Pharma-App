@@ -92,7 +92,7 @@ const styles = StyleSheet.create({
     justifyContent: 'center',
     gap: scale(12),
     alignItems: 'center',
-    marginTop: verticalScale(10),
+    marginTop: verticalScale(15),
   },
   guestButtonText: {
     color: '#424242',

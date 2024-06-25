@@ -22,6 +22,10 @@ function Login() {
     navigation.navigate('SignUp' as never);
   };
 
+  const HandleForgotPassword = () => {
+    navigation.navigate('ForgotPassword' as never);
+  };
+
   return (
     <View style={styles.container}>
       <Header
@@ -100,7 +104,7 @@ function Login() {
         </TouchableOpacity>
       </View>
       <View>
-        <TouchableOpacity>
+        <TouchableOpacity onPress={() => HandleForgotPassword()}>
           <Text style={styles.forgotPassword}>Forgot your password?</Text>
         </TouchableOpacity>
       </View>
