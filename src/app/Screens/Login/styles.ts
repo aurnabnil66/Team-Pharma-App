@@ -8,30 +8,6 @@ const styles = StyleSheet.create({
     justifyContent: 'flex-start',
     backgroundColor: '#FBFAF3',
   },
-  image: {
-    width: scale(375),
-    height: verticalScale(209),
-  },
-  imageText: {
-    flexDirection: 'column',
-    alignItems: 'center',
-    width: scale(343),
-    marginTop: verticalScale(70),
-    marginLeft: scale(20),
-    justifyContent: 'center',
-  },
-  loginHeader: {
-    fontSize: moderateScale(36),
-    fontWeight: '800',
-    color: '#FBFAF3',
-    marginBottom: verticalScale(5),
-  },
-  loginHeaderText: {
-    fontSize: moderateScale(16),
-    fontWeight: '400',
-    color: '#FBFAF3',
-    textAlign: 'center',
-  },
   email: {
     marginTop: verticalScale(18),
     flexDirection: 'column',
@@ -72,7 +48,7 @@ const styles = StyleSheet.create({
   showPasswordIcon: {
     position: 'absolute',
     right: scale(10),
-    top: '47%',
+    top: verticalScale(22),
     transform: [{translateY: -12}], // Adjust the vertical alignment of the icon
   },
   signInbutton: {
