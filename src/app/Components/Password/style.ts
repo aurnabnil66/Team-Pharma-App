@@ -9,16 +9,18 @@ const styles = StyleSheet.create({
     fontSize: moderateScale(14),
     fontWeight: '600',
     borderRadius: 16,
-    paddingLeft: 70,
+    paddingLeft: scale(70),
+    color: '#424242',
   },
   passwordHeader: {
     fontSize: moderateScale(14),
     fontWeight: '800',
+    color: '#424242',
   },
   passwordIcon: {
     position: 'absolute',
     left: scale(16),
-    top: '50%',
+    top: scale(25),
     transform: [{translateY: -18}], // Adjust the vertical alignment of the icon
     zIndex: 1,
   },

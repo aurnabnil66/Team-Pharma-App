@@ -16,6 +16,7 @@ const styles = StyleSheet.create({
   emailHeader: {
     fontSize: moderateScale(14),
     fontWeight: '800',
+    color: '#424242',
   },
   emailIcon: {
     position: 'absolute',
@@ -32,6 +33,7 @@ const styles = StyleSheet.create({
     fontWeight: '600',
     borderRadius: 16,
     paddingLeft: 70,
+    color: '#424242',
   },
   password: {
     marginTop: verticalScale(15),
@@ -76,6 +78,7 @@ const styles = StyleSheet.create({
   orText: {
     fontSize: moderateScale(18),
     fontWeight: '400',
+    color: '#555555',
   },
   orHorizontalLine: {
     height: verticalScale(2),

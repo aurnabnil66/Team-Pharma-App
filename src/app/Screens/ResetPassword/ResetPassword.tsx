@@ -13,7 +13,7 @@ function ResetPassword() {
 
   const HandleResetPassword = () => {
     if (newPassword === confirmPassword) {
-      //navigation.navigate('NextScreen');
+      navigation.navigate('PasswordChanged' as never);
     }
   };
 

@@ -6,8 +6,8 @@ const styles = StyleSheet.create({
     width: scale(375),
     height: verticalScale(190),
     backgroundColor: '#4F8C98',
-    borderBottomLeftRadius: 170, // Adjust radius as needed
-    borderBottomRightRadius: 170, // Adjust radius as needed
+    borderBottomLeftRadius: 130, // Adjust radius as needed
+    borderBottomRightRadius: 130, // Adjust radius as needed
   },
   headerText: {
     flexDirection: 'column',

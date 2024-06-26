@@ -48,6 +48,7 @@ const styles = StyleSheet.create({
   SignUpWithText: {
     fontSize: moderateScale(18),
     fontWeight: '400',
+    color: '#424242',
   },
   SignUpWithHorizontalLine: {
     height: verticalScale(2),
