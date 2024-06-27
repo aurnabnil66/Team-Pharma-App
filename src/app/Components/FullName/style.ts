@@ -13,7 +13,7 @@ const styles = StyleSheet.create({
     backgroundColor: '#F3F2E9',
     fontSize: moderateScale(14),
     fontWeight: '600',
-    borderRadius: 16,
+    borderRadius: scale(16),
     paddingLeft: scale(18),
     color: '#424242',
   },
