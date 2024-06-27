@@ -2,7 +2,7 @@ import {Text, View, TouchableOpacity} from 'react-native';
 import styles from './style';
 import HorizontalCalendar from '../../Components/HorizontalCalender/HorizontalCalendar';
 import CalendarIcon from '../../../assets/calender-icon';
-import PlusIcon from 'react-native-vector-icons/Feather';
+import AddMedicineButton from '../../Components/AddMedicineButton/AddMedicineButton';
 
 function GuestLogin() {
   return (
@@ -22,12 +22,7 @@ function GuestLogin() {
         </View>
       </View>
       <View style={styles.addMedicineButtonPosition}>
-        <TouchableOpacity style={styles.addMedicineButton}>
-          <View style={styles.addMedicineButtonProperties}>
-            <PlusIcon name="plus" size={22} color={'#FBFAF3'}></PlusIcon>
-            <Text style={styles.addMedicineText}>Add Medicine</Text>
-          </View>
-        </TouchableOpacity>
+        <AddMedicineButton />
       </View>
     </View>
   );

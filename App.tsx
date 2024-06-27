@@ -15,6 +15,8 @@ import PasswordChanged from './src/app/Screens/PasswordChanged/PasswordChanged';
 import GuestLogin from './src/app/Screens/GuestLogin/GuestLogin';
 import MenuIcon from 'react-native-vector-icons/Entypo';
 import {TouchableOpacity, View} from 'react-native';
+import AddMedicine from './src/app/Screens/AddMedicine/AddMedicine';
+import AddManualMedicine from './src/app/Screens/AddManualMedicine/AddManualMedicine';
 
 function App() {
   const Stack = createNativeStackNavigator();
@@ -34,30 +36,14 @@ function App() {
           name="QrCode"
           component={QrCode}
           options={{
-            title: 'TEAM',
-            headerStyle: {
-              backgroundColor: '#FBFAF3',
-            },
             headerShown: false,
-            headerTintColor: '#045A6C',
-            headerTitleStyle: {
-              fontWeight: 'bold',
-            },
           }}
         />
         <Stack.Screen
           name="QrScan"
           component={QrScan}
           options={{
-            title: 'Scan QR Code',
-            headerStyle: {
-              backgroundColor: '#FBFAF3',
-            },
             headerShown: false,
-            headerTintColor: '#045A6C',
-            headerTitleStyle: {
-              fontWeight: 'bold',
-            },
           }}
         />
         <Stack.Screen
@@ -78,90 +64,42 @@ function App() {
           name="Login"
           component={Login}
           options={{
-            title: ' ',
-            headerStyle: {
-              backgroundColor: '#FBFAF3',
-            },
             headerShown: false,
-            headerTintColor: '#424242',
-            headerTitleStyle: {
-              fontWeight: 'bold',
-            },
           }}
         />
         <Stack.Screen
           name="SignUp"
           component={SignUp}
           options={{
-            title: ' ',
-            headerStyle: {
-              backgroundColor: '#FBFAF3',
-            },
             headerShown: false,
-            headerTintColor: '#424242',
-            headerTitleStyle: {
-              fontWeight: 'bold',
-            },
           }}
         />
         <Stack.Screen
           name="ForgotPassword"
           component={ForgotPassword}
           options={{
-            title: ' ',
-            headerStyle: {
-              backgroundColor: '#FBFAF3',
-            },
             headerShown: false,
-            headerTintColor: '#424242',
-            headerTitleStyle: {
-              fontWeight: 'bold',
-            },
           }}
         />
         <Stack.Screen
           name="EnterOtp"
           component={EnterOtp}
           options={{
-            title: ' ',
-            headerStyle: {
-              backgroundColor: '#FBFAF3',
-            },
             headerShown: false,
-            headerTintColor: '#424242',
-            headerTitleStyle: {
-              fontWeight: 'bold',
-            },
           }}
         />
         <Stack.Screen
           name="ResetPassword"
           component={ResetPassword}
           options={{
-            title: ' ',
-            headerStyle: {
-              backgroundColor: '#FBFAF3',
-            },
             headerShown: false,
-            headerTintColor: '#424242',
-            headerTitleStyle: {
-              fontWeight: 'bold',
-            },
           }}
         />
         <Stack.Screen
           name="PasswordChanged"
           component={PasswordChanged}
           options={{
-            title: ' ',
-            headerStyle: {
-              backgroundColor: '#FBFAF3',
-            },
             headerShown: false,
-            headerTintColor: '#424242',
-            headerTitleStyle: {
-              fontWeight: 'bold',
-            },
           }}
         />
         <Stack.Screen
@@ -183,6 +121,20 @@ function App() {
                 <MenuIcon name="menu" size={30} color={'#424242'}></MenuIcon>
               </TouchableOpacity>
             ),
+          }}
+        />
+        <Stack.Screen
+          name="AddMedicine"
+          component={AddMedicine}
+          options={{
+            headerShown: false,
+          }}
+        />
+        <Stack.Screen
+          name="AddManualMedicine"
+          component={AddManualMedicine}
+          options={{
+            headerShown: false,
           }}
         />
       </Stack.Navigator>

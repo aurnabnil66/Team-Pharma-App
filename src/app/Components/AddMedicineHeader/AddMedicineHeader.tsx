@@ -1,20 +1,18 @@
 import {Text, View} from 'react-native';
 import styles from './style';
 
-interface IHeaderProps {
+interface IAddMedicineHeaderProps {
   mainTitle: String;
-  subTitle: String;
 }
 
-const Header = (HearderProps: IHeaderProps) => {
+const AddMedicineHeader = (HearderProps: IAddMedicineHeaderProps) => {
   return (
     <View style={styles.header}>
       <View style={styles.headerText}>
         <Text style={styles.headerMainTitle}>{HearderProps.mainTitle}</Text>
-        <Text style={styles.headerSubTitle}>{HearderProps.subTitle}</Text>
       </View>
     </View>
   );
 };
 
-export default Header;
+export default AddMedicineHeader;
