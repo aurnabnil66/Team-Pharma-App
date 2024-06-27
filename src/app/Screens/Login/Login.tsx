@@ -14,6 +14,10 @@ function Login() {
 
   const [email, setEmail] = useState<string>('');
 
+  const HandleGuestLogin = () => {
+    navigation.navigate('GuestLogin' as never);
+  };
+
   const HandleSignUp = () => {
     navigation.navigate('SignUp' as never);
   };
@@ -46,7 +50,9 @@ function Login() {
         <Text style={styles.orText}>or</Text>
         <View style={styles.orHorizontalLine}></View>
       </View>
-      <TouchableOpacity style={styles.guestButton}>
+      <TouchableOpacity
+        style={styles.guestButton}
+        onPress={() => HandleGuestLogin()}>
         <GuestIcon name="user" size={30} color={'#424242'}></GuestIcon>
         <Text style={styles.guestButtonText}>Continue as guest</Text>
       </TouchableOpacity>
