@@ -17,6 +17,8 @@ import MenuIcon from 'react-native-vector-icons/Entypo';
 import {TouchableOpacity, View} from 'react-native';
 import AddMedicine from './src/app/Screens/AddMedicine/AddMedicine';
 import AddManualMedicine from './src/app/Screens/AddManualMedicine/AddManualMedicine';
+import MedicineDoses from './src/app/Screens/MedicineDoses/MedicineDoses';
+import MedicineDailyDoses from './src/app/Screens/MedicineDailyTaking/MedicineDailyDoses';
 
 function App() {
   const Stack = createNativeStackNavigator();
@@ -133,6 +135,20 @@ function App() {
         <Stack.Screen
           name="AddManualMedicine"
           component={AddManualMedicine}
+          options={{
+            headerShown: false,
+          }}
+        />
+        <Stack.Screen
+          name="MedicineDoses"
+          component={MedicineDoses}
+          options={{
+            headerShown: false,
+          }}
+        />
+        <Stack.Screen
+          name="MedicineDailyDoses"
+          component={MedicineDailyDoses}
           options={{
             headerShown: false,
           }}

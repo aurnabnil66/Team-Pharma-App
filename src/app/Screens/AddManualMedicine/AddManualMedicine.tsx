@@ -6,6 +6,11 @@ import {useNavigation} from '@react-navigation/native';
 
 function AddManualMedicine() {
   const navigation = useNavigation();
+
+  const HandleScheduleDosage = () => {
+    navigation.navigate('MedicineDoses' as never);
+  };
+
   return (
     <View style={styles.container}>
       <View>
@@ -24,7 +29,7 @@ function AddManualMedicine() {
       <View style={styles.buttonPosition}>
         <TouchableOpacity
           style={styles.button}
-          onPress={() => navigation.navigate('Login' as never)}>
+          onPress={() => HandleScheduleDosage()}>
           <Text style={styles.buttonText}>Schedule Dosage</Text>
           <RightArrowIcon
             name="arrow-right-long"
