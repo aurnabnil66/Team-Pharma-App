@@ -1,25 +1,28 @@
 import {StyleSheet} from 'react-native';
-import {scale, moderateScale, verticalScale} from 'react-native-size-matters';
+import {moderateScale, scale, verticalScale} from 'react-native-size-matters';
 
 const styles = StyleSheet.create({
-  container: {
+  timePickerPosition: {
     flex: 1,
-    alignItems: 'center',
     justifyContent: 'center',
-    backgroundColor: '#FBFAF3',
+    alignItems: 'center',
   },
-  button: {
+  nextButtonPosition: {
+    justifyContent: 'center',
+    alignItems: 'center',
+  },
+  nextButton: {
     width: scale(320),
     height: verticalScale(56),
     borderRadius: scale(16),
-    top: verticalScale(270),
+    marginBottom: verticalScale(30),
     backgroundColor: '#045A6C',
     flexDirection: 'row',
     justifyContent: 'center',
     gap: scale(16),
     alignItems: 'center',
   },
-  buttonText: {
+  nextButtonText: {
     color: '#FBFAF3',
     fontSize: moderateScale(20),
   },

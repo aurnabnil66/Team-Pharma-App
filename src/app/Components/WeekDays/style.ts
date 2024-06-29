@@ -1,18 +1,10 @@
 import {StyleSheet} from 'react-native';
-import {moderateScale, scale, verticalScale} from 'react-native-size-matters';
+import {scale, verticalScale, moderateScale} from 'react-native-size-matters';
 
 const styles = StyleSheet.create({
   container: {
     flex: 1,
-    alignItems: 'center',
     backgroundColor: '#FBFAF3',
-  },
-  progressBarPosition: {
-    marginTop: -7,
-    borderWidth: 0,
-  },
-  buttonPositions: {
-    marginTop: verticalScale(20),
   },
   button: {
     width: scale(150),
