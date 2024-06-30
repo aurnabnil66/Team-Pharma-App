@@ -7,6 +7,7 @@ import {useNavigation} from '@react-navigation/native';
 import {useState} from 'react';
 import HorizontalNumberPicker from '../../Components/HorizontalNumberPicker/HorizontalNumberPicker';
 import WeekDays from '../../Components/WeekDays/WeekDays';
+import FullCalendar from '../../Components/FullCalendar/FullCalender';
 
 type timePeriodItemProps = {
   item: string;
@@ -63,6 +64,7 @@ function MedicineDoses() {
       </View>
       <View style={styles.doseItemsPosition}>
         {duration === 'Weekly' && <WeekDays />}
+        {duration === 'Monthly' && <FullCalendar />}
         {duration === 'Every X days' && <HorizontalNumberPicker />}
         {duration === 'Every X weeks' && <HorizontalNumberPicker />}
         {duration === 'Every X months' && <HorizontalNumberPicker />}

@@ -3,6 +3,7 @@ import styles from './style';
 import weekDays from '../../utils/weekDays';
 import {useNavigation} from '@react-navigation/native';
 import {useState} from 'react';
+import RightArrowIcon from 'react-native-vector-icons/FontAwesome6';
 
 type weekDaysProps = {
   item: string;
@@ -16,17 +17,19 @@ function WeekDays() {
   const RenderItems: React.FC<weekDaysProps> = ({item, index}) => {
     const handlePress = () => {
       if (index === 0) {
-        navigation.navigate('MedicineDailyDoses' as never);
+        setDay('Sunday');
       } else if (index === 1) {
-        setDay('Weekly');
+        setDay('Monday');
       } else if (index === 2) {
-        setDay('Monthly');
+        setDay('Tuesday');
       } else if (index === 3) {
-        setDay('Every X days');
+        setDay('Wednesday');
       } else if (index === 4) {
-        setDay('Every X weeks');
+        setDay('Thursday');
       } else if (index === 5) {
-        setDay('Every X months');
+        setDay('Friday');
+      } else if (index === 6) {
+        setDay('Saturday');
       }
     };
 
@@ -38,13 +41,24 @@ function WeekDays() {
   };
   return (
     <View>
+      <Text style={styles.daysNameText}>Select Days:</Text>
       <FlatList
-        numColumns={3}
+        numColumns={7}
         data={weekDays}
         renderItem={({item, index}) => (
           <RenderItems item={item} index={index} key={index.toString()} />
         )}
       />
+
+      <View style={styles.nextButtonPosition}>
+        <TouchableOpacity style={styles.nextButton}>
+          <Text style={styles.nextButtonText}>Next</Text>
+          <RightArrowIcon
+            name="arrow-right-long"
+            size={30}
+            color={'#FBFAF3'}></RightArrowIcon>
+        </TouchableOpacity>
+      </View>
     </View>
   );
 }
