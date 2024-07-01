@@ -28,40 +28,32 @@ const styles = StyleSheet.create({
     fontSize: moderateScale(16),
     fontWeight: '600',
   },
-  selectedDaysContainer: {
-    marginTop: verticalScale(5),
-    borderRadius: scale(5),
-    flexDirection: 'row',
-    marginLeft: scale(8),
-  },
-  selectedDaysTextWrapper: {
-    alignItems: 'flex-start',
-  },
   selectedDaysHeaderText: {
     fontSize: moderateScale(16),
     fontWeight: '600',
     color: '#045A6C',
-    marginTop: verticalScale(15),
-    marginRight: scale(145),
-  },
-  selectedDaysTextPosition: {
-    flexDirection: 'row',
-    marginTop: verticalScale(-15),
-    marginRight: scale(180),
   },
   selectedDaysText: {
     fontSize: moderateScale(16),
     fontWeight: '600',
     color: '#424242',
+    textAlign: 'justify',
   },
-  selectedDaysList: {
-    maxHeight: moderateScale(70), // Adjust this value as needed
+  selectedDaysContainer: {
+    flexDirection: 'row',
+    flexWrap: 'wrap',
+    gap: 1,
+    marginTop: '5%',
   },
   horizontalLine: {
     height: verticalScale(1),
     width: scale(242),
     marginTop: verticalScale(10),
     backgroundColor: '#9BBDC4',
+  },
+  scrollViewContainer: {
+    width: '90%',
+    maxHeight: '27%',
   },
 });
 

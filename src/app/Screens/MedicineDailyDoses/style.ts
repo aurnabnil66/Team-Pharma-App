@@ -7,6 +7,10 @@ const styles = StyleSheet.create({
     alignItems: 'center',
     backgroundColor: '#FBFAF3',
   },
+  headerAndProgressBarPosition: {
+    alignItems: 'center',
+    flex: 2,
+  },
   dailyDoseItemsPosition: {
     height: 100,
     alignItems: 'center',

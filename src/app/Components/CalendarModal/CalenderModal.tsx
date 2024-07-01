@@ -1,22 +1,22 @@
-import React, {useState} from 'react';
-import {View, Text, TouchableOpacity, Modal, FlatList} from 'react-native';
+import React from 'react';
+import {View, Text, TouchableOpacity, Modal, ScrollView} from 'react-native';
 import {Calendar} from 'react-native-calendars';
 import styles from './style';
 import {scale, moderateScale} from 'react-native-size-matters';
 
-interface FullCalendarProps {
+interface CalendarModalProps {
   modalVisible: boolean;
   setModalVisible: (visible: boolean) => void;
+  selectedDates: {[date: string]: {selected: boolean}};
+  setSelectedDates: (dates: {[date: string]: {selected: boolean}}) => void;
 }
 
-const FullCalendar: React.FC<FullCalendarProps> = ({
+const CalendarModal: React.FC<CalendarModalProps> = ({
   modalVisible,
   setModalVisible,
+  selectedDates,
+  setSelectedDates,
 }) => {
-  const [selectedDates, setSelectedDates] = useState<{
-    [date: string]: {selected: boolean};
-  }>({});
-
   // Custom function to format date as "30 June"
   const formatDate = (date: Date): string => {
     const options: Intl.DateTimeFormatOptions = {
@@ -87,23 +87,19 @@ const FullCalendar: React.FC<FullCalendarProps> = ({
               }}
             />
             <View style={styles.horizontalLine}></View>
-            <Text style={styles.selectedDaysHeaderText}>Selected Days:</Text>
-            <View style={styles.selectedDaysContainer}>
-              <FlatList
-                data={Object.keys(selectedDates)}
-                keyExtractor={item => item}
-                scrollEnabled={true}
-                showsHorizontalScrollIndicator={true}
-                renderItem={({item}) => (
-                  <Text style={styles.selectedDaysText}>
-                    {formatDate(new Date(item))},{' '}
-                  </Text>
-                )}
-                numColumns={3}
-                contentContainerStyle={styles.selectedDaysTextWrapper}
-                style={styles.selectedDaysList}
-              />
-            </View>
+            <ScrollView style={styles.scrollViewContainer}>
+              <View style={styles.selectedDaysContainer}>
+                <Text style={styles.selectedDaysHeaderText}>
+                  Selected Days:{' '}
+                </Text>
+                {Object.keys(selectedDates).length > 0 &&
+                  Object.keys(selectedDates).map(date => (
+                    <Text key={date} style={styles.selectedDaysText}>
+                      {formatDate(new Date(date))}, {''}
+                    </Text>
+                  ))}
+              </View>
+            </ScrollView>
             <View style={styles.cancelAndOKbuttonPosition}>
               <TouchableOpacity onPress={() => setModalVisible(false)}>
                 <Text style={styles.cancelAndOKButtonText}>CANCEL</Text>
@@ -119,4 +115,4 @@ const FullCalendar: React.FC<FullCalendarProps> = ({
   );
 };
 
-export default FullCalendar;
+export default CalendarModal;

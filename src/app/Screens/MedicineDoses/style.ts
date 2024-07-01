@@ -6,6 +6,10 @@ const styles = StyleSheet.create({
     flex: 1,
     backgroundColor: '#FBFAF3',
   },
+  headerAndProgressBarPosition: {
+    alignItems: 'center',
+    flex: 2,
+  },
   doseItemsPosition: {
     height: 100,
     alignItems: 'center',
@@ -35,6 +39,37 @@ const styles = StyleSheet.create({
     fontSize: moderateScale(16),
     fontWeight: '600',
     color: '#424242',
+  },
+  selectedDaysHeaderText: {
+    fontSize: moderateScale(16),
+    fontWeight: '600',
+    color: '#045A6C',
+    marginTop: verticalScale(15),
+    marginRight: scale(145),
+  },
+  selectedDaysContainer: {
+    flexWrap: 'wrap',
+    gap: 1,
+  },
+  scrollViewContainer: {
+    width: '90%',
+    maxHeight: '100%',
+  },
+  selectedDaysViewButton: {
+    height: verticalScale(29),
+    width: scale(77),
+    backgroundColor: '#9BBDC4',
+    borderRadius: scale(16),
+  },
+  selectedDaysViewButtonText: {
+    fontSize: moderateScale(14),
+    fontWeight: '400',
+    color: '#424242',
+    alignSelf: 'center',
+    marginTop: verticalScale(5),
+  },
+  selectedDaysList: {
+    marginRight: moderateScale(90),
   },
 });
 

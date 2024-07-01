@@ -43,7 +43,7 @@ function MedicineDailyDoses() {
 
   return (
     <View style={styles.container}>
-      <View style={{alignItems: 'center', flex: 2}}>
+      <View style={styles.headerAndProgressBarPosition}>
         <SecondaryHeader mainTitle="How often do you take it?" />
         <Progress.Bar
           color="#9BBDC4"
