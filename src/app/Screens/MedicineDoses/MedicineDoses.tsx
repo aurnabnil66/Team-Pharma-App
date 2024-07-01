@@ -17,6 +17,7 @@ type timePeriodItemProps = {
 function MedicineDoses() {
   const navigation = useNavigation();
   const [duration, setDuration] = useState('');
+  const [calendarVisible, setCalendarVisible] = useState(false);
 
   const RenderItems: React.FC<timePeriodItemProps> = ({item, index}) => {
     const handlePress = () => {
@@ -26,6 +27,7 @@ function MedicineDoses() {
         setDuration('Weekly');
       } else if (index === 2) {
         setDuration('Monthly');
+        setCalendarVisible(true);
       } else if (index === 3) {
         setDuration('Every X days');
       } else if (index === 4) {
@@ -64,7 +66,12 @@ function MedicineDoses() {
       </View>
       <View style={styles.doseItemsPosition}>
         {duration === 'Weekly' && <WeekDays />}
-        {duration === 'Monthly' && <FullCalendar />}
+        {duration === 'Monthly' && (
+          <FullCalendar
+            modalVisible={calendarVisible}
+            setModalVisible={setCalendarVisible}
+          />
+        )}
         {duration === 'Every X days' && <HorizontalNumberPicker />}
         {duration === 'Every X weeks' && <HorizontalNumberPicker />}
         {duration === 'Every X months' && <HorizontalNumberPicker />}

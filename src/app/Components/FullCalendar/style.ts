@@ -2,15 +2,6 @@ import {StyleSheet} from 'react-native';
 import {scale, moderateScale, verticalScale} from 'react-native-size-matters';
 
 const styles = StyleSheet.create({
-  button: {
-    padding: verticalScale(10),
-    backgroundColor: '#045A6C',
-    borderRadius: scale(5),
-  },
-  buttonText: {
-    color: '#FFFFFF',
-    fontSize: moderateScale(16),
-  },
   modalContainer: {
     flex: 1,
     justifyContent: 'center',
@@ -20,19 +11,17 @@ const styles = StyleSheet.create({
   calendarContainer: {
     backgroundColor: '#FFFFFF',
     borderRadius: scale(16),
-    padding: verticalScale(20),
+    padding: verticalScale(12),
     alignItems: 'center',
     width: scale(300), // Adjust width as needed
-    height: verticalScale(450), // Adjust height as needed
+    height: verticalScale(440), // Adjust height as needed
   },
   cancelAndOKbuttonPosition: {
     flexDirection: 'row',
-    marginLeft: scale(120),
-  },
-  cancelAndOKbutton: {
-    marginTop: verticalScale(10),
-    padding: verticalScale(10),
-    borderRadius: scale(5),
+    position: 'absolute',
+    left: scale(175),
+    gap: scale(14),
+    marginTop: verticalScale(400),
   },
   cancelAndOKButtonText: {
     color: '#045A6C',
@@ -40,11 +29,13 @@ const styles = StyleSheet.create({
     fontWeight: '600',
   },
   selectedDaysContainer: {
-    marginTop: verticalScale(10),
-    padding: verticalScale(10),
+    marginTop: verticalScale(5),
     borderRadius: scale(5),
-    overflow: 'scroll',
-    flexDirection: 'column',
+    flexDirection: 'row',
+    marginLeft: scale(8),
+  },
+  selectedDaysTextWrapper: {
+    alignItems: 'flex-start',
   },
   selectedDaysHeaderText: {
     fontSize: moderateScale(16),
@@ -62,6 +53,9 @@ const styles = StyleSheet.create({
     fontSize: moderateScale(16),
     fontWeight: '600',
     color: '#424242',
+  },
+  selectedDaysList: {
+    maxHeight: moderateScale(70), // Adjust this value as needed
   },
   horizontalLine: {
     height: verticalScale(1),

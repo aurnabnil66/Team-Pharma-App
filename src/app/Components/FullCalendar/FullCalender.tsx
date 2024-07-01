@@ -1,14 +1,21 @@
 import React, {useState} from 'react';
-import {View, Text, TouchableOpacity, Modal} from 'react-native';
+import {View, Text, TouchableOpacity, Modal, FlatList} from 'react-native';
 import {Calendar} from 'react-native-calendars';
 import styles from './style';
-import {scale, moderateScale, verticalScale} from 'react-native-size-matters';
+import {scale, moderateScale} from 'react-native-size-matters';
 
-const FullCalendar: React.FC = () => {
+interface FullCalendarProps {
+  modalVisible: boolean;
+  setModalVisible: (visible: boolean) => void;
+}
+
+const FullCalendar: React.FC<FullCalendarProps> = ({
+  modalVisible,
+  setModalVisible,
+}) => {
   const [selectedDates, setSelectedDates] = useState<{
     [date: string]: {selected: boolean};
   }>({});
-  const [modalVisible, setModalVisible] = useState(false);
 
   // Custom function to format date as "30 June"
   const formatDate = (date: Date): string => {
@@ -35,11 +42,6 @@ const FullCalendar: React.FC = () => {
 
   return (
     <View>
-      <TouchableOpacity
-        onPress={() => setModalVisible(true)}
-        style={styles.button}>
-        <Text style={styles.buttonText}>Show Calendar</Text>
-      </TouchableOpacity>
       <Modal
         transparent={true}
         visible={modalVisible}
@@ -72,12 +74,12 @@ const FullCalendar: React.FC = () => {
                 arrowColor: '#045A6C', // Change arrow color
                 selectedDayBackgroundColor: '#045A6C',
                 selectedDayTextColor: '#ffffff',
-                textDayFontWeight: 'bold',
-                textMonthFontWeight: 'bold',
-                textDayHeaderFontWeight: 'bold',
+                textDayFontWeight: '400',
+                textMonthFontWeight: '500',
+                textDayHeaderFontWeight: '500',
                 textMonthFontSize: moderateScale(16),
                 textDayFontSize: moderateScale(18),
-                textDayHeaderFontSize: moderateScale(16),
+                textDayHeaderFontSize: moderateScale(14),
               }}
               style={{
                 width: scale(270), // Increase the width of the calendar
@@ -87,23 +89,26 @@ const FullCalendar: React.FC = () => {
             <View style={styles.horizontalLine}></View>
             <Text style={styles.selectedDaysHeaderText}>Selected Days:</Text>
             <View style={styles.selectedDaysContainer}>
-              <View style={styles.selectedDaysTextPosition}>
-                {Object.keys(selectedDates).map((dateString, index) => (
-                  <Text key={index} style={styles.selectedDaysText}>
-                    {formatDate(new Date(dateString))},{' '}
+              <FlatList
+                data={Object.keys(selectedDates)}
+                keyExtractor={item => item}
+                scrollEnabled={true}
+                showsHorizontalScrollIndicator={true}
+                renderItem={({item}) => (
+                  <Text style={styles.selectedDaysText}>
+                    {formatDate(new Date(item))},{' '}
                   </Text>
-                ))}
-              </View>
+                )}
+                numColumns={3}
+                contentContainerStyle={styles.selectedDaysTextWrapper}
+                style={styles.selectedDaysList}
+              />
             </View>
             <View style={styles.cancelAndOKbuttonPosition}>
-              <TouchableOpacity
-                onPress={() => setModalVisible(false)}
-                style={styles.cancelAndOKbutton}>
+              <TouchableOpacity onPress={() => setModalVisible(false)}>
                 <Text style={styles.cancelAndOKButtonText}>CANCEL</Text>
               </TouchableOpacity>
-              <TouchableOpacity
-                onPress={() => setModalVisible(false)}
-                style={styles.cancelAndOKbutton}>
+              <TouchableOpacity onPress={() => setModalVisible(false)}>
                 <Text style={styles.cancelAndOKButtonText}>OK</Text>
               </TouchableOpacity>
             </View>
