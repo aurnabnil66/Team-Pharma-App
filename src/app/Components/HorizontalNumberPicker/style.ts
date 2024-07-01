@@ -1,25 +1,37 @@
 import {StyleSheet} from 'react-native';
-import {scale, moderateScale, verticalScale} from 'react-native-size-matters';
+import {scale, verticalScale, moderateScale} from 'react-native-size-matters';
 
 const styles = StyleSheet.create({
   container: {
     flex: 1,
-    alignItems: 'center',
-    justifyContent: 'center',
-    backgroundColor: '#FBFAF3',
   },
-  button: {
+  item: {
+    justifyContent: 'center',
+    alignItems: 'center',
+    width: scale(66),
+    marginTop: verticalScale(70),
+  },
+  itemText: {
+    fontSize: moderateScale(18),
+    color: '#045A6C',
+    fontWeight: '700',
+  },
+  nextButtonPosition: {
+    justifyContent: 'center',
+    alignItems: 'center',
+  },
+  nextButton: {
     width: scale(320),
     height: verticalScale(56),
     borderRadius: scale(16),
-    top: verticalScale(270),
+    marginBottom: verticalScale(30),
     backgroundColor: '#045A6C',
     flexDirection: 'row',
     justifyContent: 'center',
     gap: scale(16),
     alignItems: 'center',
   },
-  buttonText: {
+  nextButtonText: {
     color: '#FBFAF3',
     fontSize: moderateScale(20),
   },

@@ -18,7 +18,7 @@ import {TouchableOpacity, View} from 'react-native';
 import AddMedicine from './src/app/Screens/AddMedicine/AddMedicine';
 import AddManualMedicine from './src/app/Screens/AddManualMedicine/AddManualMedicine';
 import MedicineDoses from './src/app/Screens/MedicineDoses/MedicineDoses';
-import MedicineDailyDoses from './src/app/Screens/MedicineDailyTaking/MedicineDailyDoses';
+import MedicineDailyDoses from './src/app/Screens/MedicineDailyDoses/MedicineDailyDoses';
 
 function App() {
   const Stack = createNativeStackNavigator();

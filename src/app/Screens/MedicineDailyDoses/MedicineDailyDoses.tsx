@@ -1,37 +1,36 @@
 import {FlatList, Text, TouchableOpacity, View} from 'react-native';
 import styles from './style';
 import SecondaryHeader from '../../Components/SecondaryHeader/SecondaryHeader';
-import medicineDoseItems from '../../utils/medicineDoseItems';
 import * as Progress from 'react-native-progress';
 import {useNavigation} from '@react-navigation/native';
 import {useState} from 'react';
+import medicineDailyDoseItems from '../../utils/medicineDailyDoseItems';
+import ScrollableTimePicker from '../../Components/ScrollableTimePicker/ScrollableTimePicker';
 import HorizontalNumberPicker from '../../Components/HorizontalNumberPicker/HorizontalNumberPicker';
-import WeekDays from '../../Components/WeekDays/WeekDays';
-import FullCalendar from '../../Components/FullCalendar/FullCalender';
 
 type timePeriodItemProps = {
   item: string;
   index: number;
 };
 
-function MedicineDoses() {
+function MedicineDailyDoses() {
   const navigation = useNavigation();
   const [duration, setDuration] = useState('');
 
   const RenderItems: React.FC<timePeriodItemProps> = ({item, index}) => {
     const handlePress = () => {
       if (index === 0) {
-        navigation.navigate('MedicineDailyDoses' as never);
+        setDuration('Once a Day');
       } else if (index === 1) {
-        setDuration('Weekly');
+        setDuration('Twice a Day');
       } else if (index === 2) {
-        setDuration('Monthly');
+        setDuration('Three times a Day');
       } else if (index === 3) {
-        setDuration('Every X days');
+        setDuration('Four times a Day');
       } else if (index === 4) {
-        setDuration('Every X weeks');
+        setDuration('X times a Day');
       } else if (index === 5) {
-        setDuration('Every X months');
+        setDuration('Every X hours');
       }
     };
 
@@ -48,29 +47,28 @@ function MedicineDoses() {
         <SecondaryHeader mainTitle="How often do you take it?" />
         <Progress.Bar
           color="#9BBDC4"
-          progress={0.2}
+          progress={0.4}
           width={380}
           style={styles.progressBarPosition}
         />
         <View style={styles.buttonPositions}>
           <FlatList
             numColumns={2}
-            data={medicineDoseItems}
+            data={medicineDailyDoseItems}
             renderItem={({item, index}) => (
               <RenderItems item={item} index={index} key={index.toString()} />
             )}
           />
         </View>
       </View>
-      <View style={styles.doseItemsPosition}>
-        {duration === 'Weekly' && <WeekDays />}
-        {duration === 'Monthly' && <FullCalendar />}
-        {duration === 'Every X days' && <HorizontalNumberPicker />}
-        {duration === 'Every X weeks' && <HorizontalNumberPicker />}
-        {duration === 'Every X months' && <HorizontalNumberPicker />}
+      <View style={styles.dailyDoseItemsPosition}>
+        {duration === 'Once a Day' && <ScrollableTimePicker />}
+        {duration === 'Twice a Day' && <ScrollableTimePicker />}
+        {duration === 'X times a Day' && <HorizontalNumberPicker />}
+        {duration === 'Every X hours' && <HorizontalNumberPicker />}
       </View>
     </View>
   );
 }
 
-export default MedicineDoses;
+export default MedicineDailyDoses;

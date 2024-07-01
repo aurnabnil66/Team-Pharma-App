@@ -6,7 +6,12 @@ const styles = StyleSheet.create({
     flex: 1,
     backgroundColor: '#FBFAF3',
   },
-
+  doseItemsPosition: {
+    height: 100,
+    alignItems: 'center',
+    justifyContent: 'center',
+    flex: 1.5,
+  },
   buttonPositions: {
     marginTop: verticalScale(20),
   },

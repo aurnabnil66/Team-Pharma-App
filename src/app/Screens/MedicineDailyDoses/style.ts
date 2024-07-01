@@ -7,9 +7,15 @@ const styles = StyleSheet.create({
     alignItems: 'center',
     backgroundColor: '#FBFAF3',
   },
+  dailyDoseItemsPosition: {
+    height: 100,
+    alignItems: 'center',
+    justifyContent: 'center',
+    flex: 1.5,
+  },
   progressBarPosition: {
-    marginTop: -7,
-    borderWidth: 0,
+    marginTop: verticalScale(-5.5),
+    borderWidth: scale(0),
   },
   buttonPositions: {
     marginTop: verticalScale(20),
